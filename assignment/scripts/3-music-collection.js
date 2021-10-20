@@ -10,7 +10,7 @@ function addToCollection(title, artist, yearPublished){
   } //end album
   collection.push(album);
   console.log(album.title);
-  return album.title;
+  return album;
 } // end addToCollection
 
 addToCollection('Feels', 'Animal Collective', '2005');
@@ -21,3 +21,13 @@ addToCollection('Saint Cloud', 'Waxahatchee', '2020');
 addToCollection('A Love Supreme', 'John Coltrane', '1965');
 
 console.log(collection);
+//console.log(album);
+
+function showCollection(arr){
+  console.log(arr.length);
+  for (i=0; i<arr.length; i++){
+    console.log(`${arr[i].title} by ${arr[i].artist}, published in ${arr[i].yearPublished}`);
+  } //end loop
+} //end showCollection
+
+showCollection(collection);
