@@ -38,10 +38,13 @@ function findByArtist(artist){
     if (artist === collection[i].artist){
       foundArtist.push(artist)
       console.log(artist);
-    } // end if statement
-  } return [];// end for loop
+      return foundArtist;
+  } // end if statement
+  } if (foundArtist.length === 0) {
+    return '[]';
+  } // end for loop
 } //end findByArtist
 
-findByArtist('Liz Phair');
-findByArtist('Galaxie 500');
-findByArtist('Prince');
+console.log(findByArtist('Liz Phair'));
+console.log(findByArtist('Galaxie 500'));
+console.log(findByArtist('Prince'));
