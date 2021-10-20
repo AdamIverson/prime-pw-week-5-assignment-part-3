@@ -13,8 +13,8 @@ function addToCollection(title, artist, yearPublished){
   return album;
 } // end addToCollection
 
-addToCollection('Feels', 'Animal Collective', '2005');
 addToCollection('Today', 'Galaxie 500', '1989');
+addToCollection('This Is Our Music', 'Galaxie 500', '1990')
 addToCollection('Exile in Guyville', 'Liz Phair', '1993');
 addToCollection("Sackcloth 'N' Ashes", '16 Horsepower', '1996');
 addToCollection('Saint Cloud', 'Waxahatchee', '2020');
@@ -31,3 +31,17 @@ function showCollection(arr){
 } //end showCollection
 
 showCollection(collection);
+
+function findByArtist(artist){
+  let foundArtist = [];
+  for (i=0; i<collection.length; i++){
+    if (artist === collection[i].artist){
+      foundArtist.push(artist)
+      console.log(artist);
+    } // end if statement
+  } return [];// end for loop
+} //end findByArtist
+
+findByArtist('Liz Phair');
+findByArtist('Galaxie 500');
+findByArtist('Prince');
